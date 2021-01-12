@@ -87,7 +87,10 @@ They tell you what the user might like, instead of what could be useful to that 
 
 22. How do the steps of the Drivetrain Approach map to a recommendation system?
 
-
+ 1. Consider your objective. Regarding housing: What is the most attractive house for you?
+ 2. What data do I have that can help me achieve that objective. Regarding housing: I have data about the user characteristics.
+ 3. What data should I get. Regarding housing: I should collect data about the houses available.
+ 4. Build a model. Build a recommendation system that recommends to users houses that were attractive to similar-profile users.
 
 23. Create an image recognition model using data you curate, and deploy it on the web.
 
@@ -95,15 +98,18 @@ They tell you what the user might like, instead of what could be useful to that 
 
 24. What is DataLoaders?
 
-
+DataLoaders is an object that helps assembling the data you pass in a format suitable to model training. It is a class that stores whatever DataLoader objects you pass to it, and makes them available as train and valid. In fastai this object is essential, as it is the one that provides data for the model.
 
 25. What four things do we need to tell fastai to create DataLoaders?
 
-
+ 1. What kind of data we are working with (tabular, images, text, etc.)
+ 2. How to get the list of items
+ 3. How to label these items
+ 4. How to create a validation set
 
 26. What does the splitter parameter to DataBlock do?
 
-
+Splits the data in a training and validations sets.
 
 27. How do we ensure a random split always gives the same validation set?
 
