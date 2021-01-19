@@ -210,13 +210,14 @@ Because the backwards method adds the gradients of the loss function to the curr
 
 def train_model(model, epochs):
     for epoch in epochs:
-        for xb, yb in batches_dataloaders:
+        for xb, yb in training_batches_dataloaders:
             preds = model(xb)
             loss = loss_function(preds, yb)
             loss.backward()
             params = params - learning_rate * params.grad
             params.grad.zero_()
-        #TODO: Add metric calculation        
+            
+            check the accuracy for the whole validation dataset: we would obtain the accuracy for each minibatch and then obtain the mean of all minibatches.
 
 ```
 
